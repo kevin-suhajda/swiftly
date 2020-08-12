@@ -42,5 +42,5 @@ workflows:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
       publishing:
         app_store_connect:                 
-          apple_id: Encrypted(Z0FBQUFBQmZOQTRWZUdzR01BMTdDbmFoR1l3N0dqU09MaGRnellRTmpWR3RUYUI5V3dwNlJTNS04OHVPVmh4eEh0RmRUc0tzbG1XQTVoUnh4RGJOM0g4VjJXSW8wMXI3VFY5RWRJZGdTbUh1WEgtZ1hySjhnb0k9)     
+          apple_id: suhajda.kevin.ferenc@gmail.com   
           password: Encrypted(Z0FBQUFBQmZOQVlvQXJBUUpJWmNRenhnZzVURHRYV0JwOGRYVUVPdVY5aWVRR214Uk9KM3lUWTJIclFhamNmTF9uRUZ4SDFpYXA4VG80czdvY1NlSTFMSnR1SWFqaGhCMVlYRVBvZmcybHo0clhqT01VTWkzbkk9)          
