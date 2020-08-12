@@ -33,7 +33,7 @@ workflows:
           #!/bin/sh
           set -e
           set -x
-          cd $FCI_BUILD_DIR/ios
+          cd $FCI_BUILD_DIR
           agvtool new-version -all $(($BUILD_NUMBER + 1))
         - xcode-project use-profiles
         - xcode-project build-ipa --project "swiftly.xcodeproj" --scheme "swiftly"
