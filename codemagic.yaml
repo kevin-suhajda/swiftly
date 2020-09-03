@@ -43,6 +43,7 @@ workflows:
                 set -x
                 cd $FCI_BUILD_DIR
                 agvtool new-version -all $(($BUILD_NUMBER + $TESTFLIGHT_INDEX_DIFF +1))
+            - xcode-project use-profiles
             - xcode-project build-ipa --project "$XCODE_PROJECT.xcodeproj" --scheme "$XCODE_SCHEME"
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
