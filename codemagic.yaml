@@ -46,7 +46,7 @@ workflows:
             - xcode-project use-profiles
             - xcode-project build-ipa --project "$XCODE_PROJECT.xcodeproj" --scheme "$XCODE_SCHEME"
         artifacts:
-            - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+            - build/ios/ipa/*.ipa
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
         publishing:
             app_store_connect:                 
