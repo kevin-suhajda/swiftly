@@ -43,7 +43,7 @@ workflows:
                 set -x
                 cd $FCI_BUILD_DIR
                 agvtool new-version -all $(($BUILD_NUMBER + $TESTFLIGHT_INDEX_DIFF +1))
-            - xcodebuild build -project "$XCODE_PROJECT.xcodeproj" -scheme "$XCODE_SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+            - xcodebuild build --project "$XCODE_PROJECT.xcodeproj" --scheme "$XCODE_SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
