@@ -163,7 +163,6 @@
 				283A46686316F8B15263856D /* Pods-swiftlyTests.debug.xcconfig */,
 				E6FC31AD7470CCCBF87F9C52 /* Pods-swiftlyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -558,7 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftly;
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftlyr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Swiftly Development";
 				SWIFT_VERSION = 5.0;
@@ -581,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftly;
+				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftlyr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Swiftly Distribution";
 				SWIFT_VERSION = 5.0;
