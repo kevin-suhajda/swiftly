@@ -6,10 +6,10 @@ workflows:
           XCODE_WORKSPACE: "swiftly.xcworkspace"
           XCODE_SCHEME: "swiftly"
           BUNDLE_ID: "io.codemagic.swiftly"
-          APP_STORE_CONNECT_ISSUER_ID: # <-- Add Issuer Id
-          APP_STORE_CONNECT_KEY_IDENTIFIER: # <-- Add Key Identifier Id
-          APP_STORE_CONNECT_PRIVATE_KEY: # <-- Add Private Key
-          CERTIFICATE_PRIVATE_KEY: # <-- Add Certificate Private Key
+          APP_STORE_CONNECT_ISSUER_ID: 
+          APP_STORE_CONNECT_KEY_IDENTIFIER: 
+          APP_STORE_CONNECT_PRIVATE_KEY: 
+          CERTIFICATE_PRIVATE_KEY: 
         xcode: latest
         cocoapods: default
       triggering:
@@ -18,14 +18,14 @@ workflows:
           - tag
           - pull_request
         branch_patterns:
-          - pattern: 'master'
+          - pattern: 'develop'
             include: true
             source: true
       scripts:
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
             keychain initialize
-        - name: 
+        - name: Fetch signing files
           script: |
             app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
         - name: Use system default keychain
@@ -50,7 +50,7 @@ workflows:
       publishing:
         app_store_connect:                 
           apple_id: suhajda.kevin.ferenc@gmail.com   
-          password: # <-- Add App-specific password
+          password: 
         email:
             recipients:
             - kevin@nevercode.io
