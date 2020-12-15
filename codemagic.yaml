@@ -2,7 +2,6 @@ workflows:
     ios-swiftly:
       name: ios_swiftly
       instance_type: mac_mini
-      build_timeout: 120
       environment:
         vars:
           XCODE_WORKSPACE: "swiftly.xcworkspace"
