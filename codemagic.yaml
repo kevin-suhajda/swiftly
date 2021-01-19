@@ -49,9 +49,14 @@ workflows:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
       publishing:
-        app_store_connect:                 
-          apple_id: suhajda.kevin.ferenc@gmail.com
-          password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
-        email:
-            recipients:
-            - kevin@nevercode.io
+        scripts:
+          - name: Check artifacts
+            script: |
+              echo $FCI_ARTIFACT_LINKS
+              sleep 20m
+        # app_store_connect:                 
+        #   apple_id: suhajda.kevin.ferenc@gmail.com
+        #   password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
+        # email:
+        #     recipients:
+        #     - kevin@nevercode.io
