@@ -56,9 +56,8 @@ workflows:
               echo $IPA_URL
               MODY=$(jq -n --arg lurl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$lurl}}]}]}]}}')
 
-              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" \
-              --data $MODY https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
-              sleep 20m
+              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data $MODY https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
+
         # app_store_connect:                 
         #   apple_id: suhajda.kevin.ferenc@gmail.com
         #   password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
