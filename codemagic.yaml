@@ -70,7 +70,7 @@ workflows:
                                                 {
                                                     "type": "link",
                                                     "attrs": {
-                                                        "href": "'"$IPA_URL"'"
+                                                        "href": "https://codemagic.io"
                                                     }
                                                 }
                                             ]
