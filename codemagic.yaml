@@ -55,7 +55,7 @@ workflows:
               #!/bin/sh
               set -e
               set -x
-              IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq '.[] | select(.name | endswith(".ipa")) | .url')
+              IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url')
               echo $IPA_URL
               MODY=$(jq -n -r --arg lurl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$lurl}}]}]}]}}')
               echo $MODY
