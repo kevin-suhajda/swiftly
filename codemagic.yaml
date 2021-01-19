@@ -53,7 +53,7 @@ workflows:
           - name: Check artifacts
             script: |
               IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq '.[] | select(.name | endswith(".ipa")) | .url')
-              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"body":{"type":"doc","version":1,"content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":"https://google.com"}}]}]}}' https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
+              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":"https://google.com"}}]}]}]}}' https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
               sleep 20m
         # app_store_connect:                 
         #   apple_id: suhajda.kevin.ferenc@gmail.com
