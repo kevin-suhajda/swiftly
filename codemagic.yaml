@@ -59,7 +59,7 @@ workflows:
               echo $IPA_URL
               MODY=$(jq -n --arg lurl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$lurl}}]}]}]}}')
               echo $MODY
-              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "'$MODY'" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
+              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "'"$MODY"'" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
 
         # app_store_connect:                 
         #   apple_id: suhajda.kevin.ferenc@gmail.com
