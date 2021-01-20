@@ -69,6 +69,7 @@ workflows:
               #TEST_URL="https:\/\/api.codemagic.io\/artifacts\/10adb242-4a3e-4eda-b853-123aaef889f5\/06c3982b-b532-4449-b876-422d616bba19\/swiftly.ipa"
               #ORIG_URL="https://api.codemagic.io/artifacts/10adb242-4a3e-4eda-b853-123aaef889f5/06c3982b-b532-4449-b876-422d616bba19/swiftly.ipa"
               TEST_URL= echo $IPA_URL | sed 's#/#\\/#g'
+              echo "The URL is now set as: "$TEST_URL
               #COMMIT= echo $FCI_COMMIT | sed 's/^\(........\).*/\1/;q'
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
