@@ -55,7 +55,7 @@ workflows:
               #!/bin/sh
               set -e
               set -x
-              IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url')
+              IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url') | sed 's#/#\\/#g'
               IPA_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .name')
               BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .bundleId')
               VESION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .versionName')
