@@ -63,7 +63,31 @@ workflows:
               #echo $IPA_URL
               #MODY=$(jq -n -r --arg ipaUrl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$ipaUrl}}]}]}]}}')
               MODY=$(jq -c . <<JSON
-              {"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":"$IPA_URL"}}]}]}]}}
+              {
+                  "body": {
+                      "type": "doc",
+                      "version": 1,
+                      "content": [
+                          {
+                              "type": "paragraph",
+                              "content": [
+                                  {
+                                      "type": "text",
+                                      "text": "link",
+                                      "marks": [
+                                          {
+                                              "type": "link",
+                                              "attrs": {
+                                                  "href": "$IPA_URL"
+                                              }
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              }
               JSON
               )
               #echo $MODY
