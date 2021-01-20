@@ -6,6 +6,18 @@
             {
                 "type": "heading",
                 "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Swiftly [Android]"
+                  }
+                ]
+            },
+            {
+                "type": "heading",
+                "attrs": {
                   "level": 4
                 },
                 "content": [
@@ -15,6 +27,18 @@
                   }
                 ]
             },
+            {
+                "type": "heading",
+                "attrs": {
+                  "level": 5
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "$BUNDLE"
+                  }
+                ]
+              },
             {
                 "type": "panel",
                 "attrs": {
@@ -26,7 +50,17 @@
                         "content": [
                             {
                                 "type": "text",
-                                "text": "commit $FCI_COMMIT"
+                                "text": "commit",
+                                "marks": [
+                                    {
+                                      "type": "strong"
+                                    }
+                                  ]
+                    
+                            },
+                            {
+                                "type": "text",
+                                "text": "$FCI_COMMIT"
                             }
                         ]
                     }
