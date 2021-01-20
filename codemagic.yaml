@@ -74,7 +74,7 @@ workflows:
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
               sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
-              sed -i.bak "s/\$FCI_COMMIT/$FCI_COMMIT/" .templates/jira.json
+              sed -i.bak "s/\$FCI_COMMIT/COMMIT/" .templates/jira.json
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
               #curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "$MODY" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
