@@ -6,39 +6,39 @@
             {
                 "type": "heading",
                 "attrs": {
-                  "level": 2
+                    "level": 2
                 },
                 "content": [
-                  {
-                    "type": "text",
-                    "text": "Swiftly [Android]"
-                  }
+                    {
+                        "type": "text",
+                        "text": "Swiftly [Android]"
+                    }
                 ]
             },
             {
                 "type": "heading",
                 "attrs": {
-                  "level": 4
+                    "level": 4
                 },
                 "content": [
-                  {
-                    "type": "text",
-                    "text": "Build $VERSION_NAME"
-                  }
+                    {
+                        "type": "text",
+                        "text": "Build $VERSION_NAME"
+                    }
                 ]
             },
             {
                 "type": "heading",
                 "attrs": {
-                  "level": 5
+                    "level": 5
                 },
                 "content": [
-                  {
-                    "type": "text",
-                    "text": "$BUNDLE"
-                  }
+                    {
+                        "type": "text",
+                        "text": "$BUNDLE"
+                    }
                 ]
-              },
+            },
             {
                 "type": "panel",
                 "attrs": {
@@ -53,10 +53,9 @@
                                 "text": "commit",
                                 "marks": [
                                     {
-                                      "type": "strong"
+                                        "type": "strong"
                                     }
-                                  ]
-                    
+                                ]
                             },
                             {
                                 "type": "text",
