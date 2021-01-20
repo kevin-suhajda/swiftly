@@ -66,7 +66,7 @@ workflows:
               #echo $MODY
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
-              sed -i.bak "s/\$IPA_URL/https:%2F%2Fapi.codemagic.io%2Fartifacts%2F10adb242-4a3e-4eda-b853-123aaef889f5%2F06c3982b-b532-4449-b876-422d616bba19%2Fswiftly.ipa%2F" 
+              sed -i.bak "s/\$IPA_URL/https:%2F%2Fapi.codemagic.io%2Fartifacts%2F10adb242-4a3e-4eda-b853-123aaef889f5%2F06c3982b-b532-4449-b876-422d616bba19%2Fswiftly.ipa%2F/" 
               #curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "$MODY" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
               curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
 
