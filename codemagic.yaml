@@ -50,15 +50,23 @@ workflows:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
       publishing:
         scripts:
-          - name: Check artifacts
+          - name: Post to JIRA
             script: |
               #!/bin/sh
               set -e
               set -x
               IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url')
-              echo $IPA_URL
-              MODY=$(jq -n -r --arg lurl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$lurl}}]}]}]}}')
-              echo $MODY
+              IPA_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .name')
+              BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .bundleId')
+              VESION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .versionName')
+              BUILD_DATE=$(date +"%Y-%m-%d %H:%M")
+              #echo $IPA_URL
+              #MODY=$(jq -n -r --arg ipaUrl $IPA_URL '{"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$ipaUrl}}]}]}]}}')
+              MODY=$(jq -c . <<JSON
+              {"body":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":$IPA_URL}}]}]}]}}
+              JSON
+              )
+              #echo $MODY
               curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "$MODY" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
 
         # app_store_connect:                 
