@@ -14,7 +14,7 @@
                         "content": [
                             {
                                 "type": "text",
-                                "text": "commit [069e54]"
+                                "text": "commit $FCI_COMMIT"
                             }
                         ]
                     }
@@ -139,7 +139,7 @@
                                                     {
                                                         "type": "link",
                                                         "attrs": {
-                                                            "href": "https://api.codemagic.io/artifacts/10adb242-4a3e-4eda-b853-123aaef889f5/06c3982b-b532-4449-b876-422d616bba19/swiftly.ipa"
+                                                            "href": "$IPA_URL"
                                                         }
                                                     }
                                                 ]
