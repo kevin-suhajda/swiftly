@@ -50,7 +50,7 @@
                         "content": [
                             {
                                 "type": "text",
-                                "text": "commit",
+                                "text": "commit ",
                                 "marks": [
                                     {
                                         "type": "strong"
@@ -194,19 +194,6 @@
                                 ]
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "type": "paragraph",
-                "content": [
-                    {
-                        "type": "mention",
-                        "attrs": {
-                            "id": "5c94e4806f495b2df279b587",
-                            "text": "@Kevin Suhajda",
-                            "accessLevel": ""
-                        }
                     }
                 ]
             }
