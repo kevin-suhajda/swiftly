@@ -1,0 +1,170 @@
+{
+    "body": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+            {
+                "type": "panel",
+                "attrs": {
+                    "panelType": "success"
+                },
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "commit [069e54]"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "attrs": {
+                    "isNumberColumnEnabled": false,
+                    "layout": "default"
+                },
+                "content": [
+                    {
+                        "type": "tableRow",
+                        "content": [
+                            {
+                                "type": "tableHeader",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "Date",
+                                                "marks": [
+                                                    {
+                                                        "type": "strong"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tableHeader",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "Filename",
+                                                "marks": [
+                                                    {
+                                                        "type": "strong"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tableHeader",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "Installer",
+                                                "marks": [
+                                                    {
+                                                        "type": "strong"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "tableRow",
+                        "content": [
+                            {
+                                "type": "tableCell",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "$BUILD_DATE"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tableCell",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "$IPA_NAME"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "tableCell",
+                                "attrs": {},
+                                "content": [
+                                    {
+                                        "type": "paragraph",
+                                        "content": [
+                                            {
+                                                "type": "text",
+                                                "text": "Install",
+                                                "marks": [
+                                                    {
+                                                        "type": "link",
+                                                        "attrs": {
+                                                            "href": "$IPA_URL"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "content": [
+                    {
+                        "type": "mention",
+                        "attrs": {
+                            "id": "5c94e4806f495b2df279b587",
+                            "text": "@Kevin Suhajda",
+                            "accessLevel": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
