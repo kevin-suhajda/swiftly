@@ -4,6 +4,18 @@
         "version": 1,
         "content": [
             {
+                "type": "heading",
+                "attrs": {
+                  "level": 4
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Build $VERSION_NAME"
+                  }
+                ]
+            },
+            {
                 "type": "panel",
                 "attrs": {
                     "panelType": "success"
