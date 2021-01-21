@@ -78,7 +78,7 @@ workflows:
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
               #curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data "$MODY" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
-              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment
+              curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json | jq "."
 
         # app_store_connect:                 
         #   apple_id: suhajda.kevin.ferenc@gmail.com
