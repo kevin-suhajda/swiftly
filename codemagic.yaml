@@ -48,9 +48,9 @@ workflows:
             set -e
             set -x
             xcode-project run-tests \
-            --workspace swiftly.xcworkspace \
-            --scheme swiftly \
-            --device "iPhone 12"
+              --workspace swiftly.xcworkspace \
+              --scheme swiftly \
+              --device "iPhone 12"
             test_report: build/ios/test/*.xml
         - name: Build ipa for distribution
           script: |
