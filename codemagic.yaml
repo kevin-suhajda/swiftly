@@ -73,6 +73,7 @@ workflows:
               BUILD_DATE=$(date +"%Y-%m-%d")
               TEST_URL=$(echo "${IPA_URL}" | sed 's#/#\\/#g')
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
+              XML_TEST=$(find -f build/ios/test/*.xml)
               
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
@@ -83,6 +84,8 @@ workflows:
 
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json | jq "."
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/transitions -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"transition":{"id":"51"}}' | jq "."
+              curl -D- -X POST -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -F "file=@$XML_TEST" https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/attachments
+        
         # app_store_connect:                 
         #   apple_id: suhajda.kevin.ferenc@gmail.com
         #   password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
