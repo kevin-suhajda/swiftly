@@ -44,10 +44,13 @@ workflows:
             agvtool new-version -all $(($BUILD_NUMBER + 80))
         - name: iOS test
           script: |
+            #!/bin/sh
+            set -e
+            set -x
             xcode-project run-tests \
-                --workspace Swiftly.xcworkspace \
-                --scheme Swiftly \
-                --device "iPhone 12"
+            --workspace Swiftly.xcworkspace \
+            --scheme Swiftly \
+            --device "iPhone 12"
             test_report: build/ios/test/*.xml
         - name: Build ipa for distribution
           script: |
