@@ -42,6 +42,13 @@ workflows:
             set -x
             cd $FCI_BUILD_DIR
             agvtool new-version -all $(($BUILD_NUMBER + 80))
+        - name: iOS test
+          script: |
+            xcode-project run-tests \
+                --workspace Swiftly.xcworkspace \
+                --scheme Swiftly \
+                --device "iPhone 12"
+            test_report: build/ios/test/*.xml
         - name: Build ipa for distribution
           script: |
             xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
