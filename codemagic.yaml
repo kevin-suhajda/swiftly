@@ -66,15 +66,25 @@ workflows:
               set -e
               set -x
               
+              # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
               IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url')
               IPA_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .name')
               BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .bundleId')
               VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .versionName')
+              
+              # Set the build date
               BUILD_DATE=$(date +"%Y-%m-%d")
+              
+              # Escape forward slash characters in URL
               TEST_URL=$(echo "${IPA_URL}" | sed 's#/#\\/#g')
+              
+              # Get first 7 digits of commit number
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
+              
+              # Get the name of the test .xml file
               XML_TEST=$(find -f build/ios/test/*.xml)
               
+              # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
               sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
@@ -82,14 +92,17 @@ workflows:
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
 
+              # Add a comment to Jira (link to JIRA docs)
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json | jq "."
-              curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/transitions -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"transition":{"id":"51"}}' | jq "."
-              curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/attachments -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -F "file=@$XML_TEST"  | jq "."
               
-        
-        # app_store_connect:                 
-        #   apple_id: suhajda.kevin.ferenc@gmail.com
-        #   password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
+              # Transition Jira issue to another status (link to JIRA docs)
+              curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/transitions -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"transition":{"id":"51"}}' | jq "."
+              
+              # Attach a file to the Jira issue
+              curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/attachments -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -F "file=@$XML_TEST"  | jq "."
+        app_store_connect:                 
+          apple_id: suhajda.kevin.ferenc@gmail.com
+          password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
         email:
             recipients:
             - kevin@nevercode.io
