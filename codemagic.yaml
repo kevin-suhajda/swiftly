@@ -9,7 +9,7 @@ workflows:
           BUNDLE_ID: "io.codemagic.swiftly"
           APP_STORE_CONNECT_ISSUER_ID: 4b453230-51cb-40b6-bfbb-60e71ddaa13a
           APP_STORE_CONNECT_KEY_IDENTIFIER: LY64D5F898
-          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmdCc2pPQXdXSVc0MmdaY1Q4SGtJczRHVTFaZnZnZ0EwUlhFcURKNGNjTlNvRk02TkJobmVqOXhzMGNkdkZpUERpUG9EdVg1S295Q0d0UWFhZlpNcXV3WEdfcE1Ea0pTSFdlNEJ2VWJ3aVVuY3FrWE9Rek9Ud0F1d1pMendGOC05NERpbTZtUlk4NWRBWjNpTUhDeTFnck5PRWZUNm5BOWdSZXlSUU9rT3NrY1NMOHN0ZUI0Sl9Ic3lEWi1tMkxyQlBtS3FZeFpQVGpBREJjZ0JabWFkSUc4MGVXTjA2OG54ZXpnSFAtUlh6Q041elVWRW5IVXcwRjhOMWVZT0ZFM1RfSnJlWWJ4OEZVMHlDa0V2MVpFcTRVWTRveDYyWkdVMkhGVWRrWi1PX1VxOUtkQkl6WUstNExBRGhuMkQtWnBMdDlZYTlNeFhSMlY4cC1GcG1JVlptN0RMdmxJSkUwazZ6bXBKaHJvUTFsUVRXUTFlaWx4R1dtWERBek5mdjlfWk1iYmltUWZSWFIwd1EzZ3JOSGxoRjEyZlM4MGlJaFFmNnhpVXRJNHBuaTFQaFZKTT0=)
+          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmdFU3UwVk82dm9uVm1QOExTVHZlTkVzemhTY0RjYmltVDFXMm9DVk9uX3BlcXYtLU9PdVROa2RvVXI3ay1PTXV3REtBRU9CUVMzTkFPd3ozU2ZUajNTRDlhMWZ2MmtLWHVrQnVZQ0xRclR1Q0FBVGo5NXZPTHJyZnJTUVo5RU5zU1pqOVhpR0RLY3NJT011UmljSFk1dXlBYk1BN3JVWW9SdldEXzY5ODQyZmgwSDgxa21oNG0yLU5OeVlXdmVfbFFRcGpFZzB6cTFFMko1elBXNmlZZ2pyMHBQZDE1NHdPNF9NXzdkSkJjeFQ4MGhxV2JsdGp6ZGpRd29KNGVHTWRfeUV1R0N5Z0ZEN3lyM2xoeWFaejVEMTVuaUxpNFJ4RkViTm5VTE1MR3FhQ3JCTXpWb0dnYzhQaE9DdGRBX3h5VDhKQ1lhbzB1SDhDOFVyb0h3WTRWVzhIa0ZfLXViUm52SFRRSkRuY1BlSWRnZ1pSVXZQZ00tdjEwWm9fRHNQaHdxcWVMR3ptQmNhd2hlM3hJaFp5QWJJLXVCRXpwZHIwY3E5Ul90bjBQVkZZU2Fadz0=)
           CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmZxN2RMb3BPMDhoRXFvVllFamFLdWF6TVhSVnJtbDVEX0hzNVg5NGJZSEdJcnQ4aUtuX2RSSXQ3Qm1zN0Q1Zk9oeVBhTmttamx5Y0JkRU5VQVZZRmZtSjJyMG5mZFNnNm9yRTRMTV9WcTZYMWxtUUtGb0pZMm9tV3VPbnA1X3VhOHMzUFFsWk5OVUpZQzNCb21GU0IxaFYyMmRSOUkzV1U4b1Vrdlg5MVl2bVNhYXctdXhxVDU1YWg1eVk5YjlTQ3NOYmI0MnRWZ0xGVERwdkZPdV9LZHY0NDFGX1Via0VFaDhXd1dzTFQ1WmJuX25kMGJuUlRkSW1naFdrRHlHWEhJNzE2ZGRnOFBTNDlLV2pwOEZRS29hcjFhRVM3RUJheEFsR3Bwc2J1c1QxZEZRUURvaWVDUVJ0TG5Ga0l2MGtTakx0NGtWQmNjY1puRVNPZGZSWHhPeFBCVDc4aGg1TGw3c0h4S1ZvYnpxOXpZbHV3M0Q2TGVDd25tQTBHZkhBYXpSN0pzVVJmbnlpRDlJUFN2dGdnZkpLV3pEQWZ4TUJxWDgtRTlJQXBzaEVESnhkTTJUUC1MS0phb2hDaVRseWI0bjJvVFl4V25ueGZSZDBVblBfbmN4cVVEelM1RmY5Tk5HYzZCNUw2SUpWMnFlTC04WmR6QW9ldmRVdDJVbWNuZE5fYU1aZE9kRFQybXFsWnhDSEFMd2VCUXAwTFhKazUtRGtneXBhSFhCaVFVQnl3VjN3alo3N19IdEJ1MTFnMXoyVGVWNE5DNHAzZkV2RUk5bUUtaHdiZTRqeUoxSjdaN3V1bGtuZmxPZ3NKOG04WlZjR2lRTDRlcEkzczA4MWoyS2d4V3RPQUR2MTJpamkwZUE4dURxc2dXMzRtaTZ1bWhiWnNTV2RUaDFhRThfZHNBMERENHJTeHBkdTc2cm9PT1FBWVhDaFEyREQ1OTBJUUVYdnZVTzZWclFNc1o3aUs5emQteEgzSkUwcU43YVYtRXc0ZkF1aDVMWktGc0lEbHJGREthTnhOQ0FiMWlLZXNBakxid0k3R0k1SHNQb2FNend4YmVEbGFrZzZodGh1Z2FHWk9SeU15LXZuMVRYeEtVamRtTlR2RGRHVm1SVFlvY1dZTHN0dlY0elJrUnllTnBqRlY3UWdrTi1XMDZnRWQwUHgxR3JfTElvVnZ1VE5CVmRPQ3A2SDhxSXVrQ0VDQ0ZvdWhYUEdNLXY1WFpDUFE2N0treWhmNXl4SG4tSGpjTzVLd1BZdzBLZVlFVTQ5UHBpYmFMb1M5Ukl1dkFtVk1MNkZETFVvYmQ0T29nN1Bwb01lR2JRT3dmNVgzM2NzUWJFU3ptXzh1WElsSjVRa3Vtd3RwQnU4RzI4WnI2QzltVzNyYzBxTm5UT3A0LWhnOG1kNTRJRVBkanNlY3B5QUx4X0FSYnlLMndsTXRXZXZielVPVUtIb1lMZXFQS3NEVFBBemlXaUFPYkpmYUJ1Y2otNkNJelpYVG5XcEJ4MVItYy1FcDdnT1RtSVdDYXRZc3hvcnBOVGw0RGNPY1ptUHBsOHhkUmFibUNuUXBtTXlaOFgyT1E2NmdIelhJWENxZVVzdXNuX3F1Tlh1MXg2aVJFR3pCVTdEc0wwc1dUR0ljTHN6ZHNuUFpHZUp0alpmNGkwaW1sSW1aVVVKVnp0YUJOODFOeS1IbG5USGVyR0NUUUY2cXFnRGV2eUpxMEdrUUt1dkNKNVFSTTRSOUJoMmd5RTAwQjlVSXI1ekt0SU50SDFjQmpodXZGNlVCNHB0QW5Sa0NNOFkzYkYxRW1tNHZyZzQ4Zmt3VGNUUEl5eHJNdU96UlF5QW00Y0ItLVFzeS1rSF9wSmFmeF9XUmlrT2dQclF4dWlKT1lJZDZfN0NSenRzaExVMmYyYVZKWkZBSEdPUUV3ZlZKZDJieFRTNGR3TldPZ2xrdTlwN3VURlgwRVZZcmhWaXNfc1ZxWXpuTUJFODdaNTB3WmRfNWtPenFwbnpoT1Y5Ujc5YlhEZFZxYXJWTXNxdHlxX2R0ME94ZmdfUzZtMk9oTjBLZWNXUEItMXJlZHNwYzJwQkJ3MXhyWk8zMGt6MXhYOHlGMGd2TjFqaC15N3pRWFZvUFFPVnhGV21STzBXcTVLTUxDM3NJM1pQUk4wc2R4d3hsSC0tckxESzdmeWlvaXk0ZGJqX0U3NW10eGJJcDI3U2VDaW10QWFwcFZ2RmFUMk5KVExLc3NkcGtFUkh3UTd3N2RhdWJvMDZlbDBwc0QwZGdUQTJKSnJEMTBCc0NVblI3Qm5zSjc2VUEtUExEQk92U0U5MF9JWHVxQjJsTURKZVFsVmFGNTRLbmptdmRkLW5BTGVfNFh4S19iVGNrOXJWdHVVNlFycXVYcnRFN2otN2ZyellSR29mVHpWbEUzc0Z3bUQydmQtV3lGUy1OaTV2cldtSXlXTklaTDdHaHFQZVU1ZlRFaWlaS2RYM0dYNmdtNElWenNVQlNQUkhKSGR1WHVHMGpDQWdhaHZkUWVlWklkeHdfS2NISXptRVlwUDRsTEZlM190UkhJTVhtZGVDUDM5d3VZMzh4VXRzTlpTVmh4NVM4empFTllnb0M3MWloam1YWEFwTmRkMnVCMzhYRUJTcDFka2lQSi1uY01vWUdQN01vWUxRQktoSzllN1h6Tk1FdVBGVXB1X3daTGRjMHBYd2tfWDBHUXoyNm1MYUt4cHM5TUtsY0xRWGVFUldTa2U1d0ZrY2ZsdkNrMU5LV0NVUDBYcVFLRWd6SGtBbURndE4tSkU3T3dRTExyZXJVUUVUUGdRX3ROR1hfOU00UUI2Zk5aVWMyM29Ga1VqN3VWNFhwTFZvSDZ6Q0twckY4d2NxbllXeThVcDNhVXEzZVdMSkxjUF9IRzdpbWdvWFBueTFQclJUamFyTjZhLXFuVG1RWExjdFpFalctbFRLV2kwUnppeDAyOWQ5a1JNREhiNm5XdjJXaXVrLXZpblhuRTZzUmRaTDkzaEhiUi1peENrcjFxRVd5eWNiYU1KYU5ncXF2R3JYS1pSNlZsTzF3RHJwRmZmV3lm)    
         xcode: 12.1
         cocoapods: default
@@ -75,16 +75,18 @@ workflows:
               # Set the build date
               BUILD_DATE=$(date +"%Y-%m-%d")
               
-              # Escape forward slash characters in URL
+              # Escape forward slash characters in URL to prevent errors when using sed to replace the template value
               TEST_URL=$(echo "${IPA_URL}" | sed 's#/#\\/#g')
               
               # Get first 7 digits of commit number
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
               
-              # Get the name of the test .xml file
+              # Get the name of the test .xml file so we can attach it to a Jira issue
               XML_TEST=$(find -f build/ios/test/*.xml)
               
-              # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira
+              # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira. 
+              # See https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/ for details on how to structure comments using Atlassion Document Format.
+              
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
               sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
@@ -92,14 +94,18 @@ workflows:
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
 
-              # Add a comment to Jira (link to JIRA docs)
+              # Add a comment to Jira 
+              # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-comments/#api-rest-api-3-comment-list-post for details
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/comment -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json | jq "."
               
-              # Transition Jira issue to another status (link to JIRA docs)
+              # Transition Jira issue to another status 
+              # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-issueidorkey-transitions-post for details
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/transitions -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"transition":{"id":"51"}}' | jq "."
               
-              # Attach a file to the Jira issue
+              # Attach a file to the Jira issue 
+              # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-attachments/#api-rest-api-3-issue-issueidorkey-attachments-post for details
               curl -X POST https://suhajda.atlassian.net/rest/api/3/issue/GEOM-1/attachments -H "Authorization: Basic a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1" -H "X-Atlassian-Token: nocheck" -F "file=@$XML_TEST"  | jq "."
+        
         app_store_connect:                 
           apple_id: suhajda.kevin.ferenc@gmail.com
           password: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9)   
