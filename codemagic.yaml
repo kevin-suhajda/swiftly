@@ -70,6 +70,8 @@ workflows:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
       publishing:
+        slack:
+          channel: "#builds"
         scripts:
           - name: Post to JIRA
             script: |
