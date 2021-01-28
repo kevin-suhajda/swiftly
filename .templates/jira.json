@@ -23,7 +23,7 @@
                 "content": [
                     {
                         "type": "text",
-                        "text": "Build $VERSION_NAME"
+                        "text": "Build $VERSION_NAME ($BUILD_VERSION)"
                     }
                 ]
             },

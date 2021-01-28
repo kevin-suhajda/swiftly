@@ -14,7 +14,6 @@ workflows:
           JIRA_AUTH: a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1
           JIRA_ISSUE: GEOM-1
           JIRA_TRANSITION_ID: 51
-          BUILD_VERSION: $(($BUILD_NUMBER + 80))
         xcode: 12.1
         cocoapods: default
       triggering:
@@ -29,7 +28,6 @@ workflows:
       scripts:
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
-            echo $BUILD_VERSION
             keychain initialize
         - name: Fetch signing files
           script: |
@@ -91,6 +89,8 @@ workflows:
               BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .bundleId')
               VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .versionName')
               
+              BUILD_VERSION=$(( ${BUILD_NUMBER} + 80 ))
+              
               # Set the build date
               BUILD_DATE=$(date +"%Y-%m-%d")
               
@@ -111,6 +111,7 @@ workflows:
               sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
               sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
+              sed -i.bak "s/\$BUILD_VERSION/$BUILD_VERSION/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
               sed -i.bak "s/\$TYPE/$TYPE/" .templates/jira.json
 
