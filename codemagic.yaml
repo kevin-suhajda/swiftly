@@ -54,8 +54,8 @@ workflows:
             set -e
             set -x
             xcode-project run-tests \
-              --workspace swiftly.xcworkspace \
-              --scheme swiftly \
+              --workspace $XCODE_WORKSPACE \
+              --scheme $XCODE_SCHEME \
               --device "iPhone 12"
           test_report: build/ios/test/*.xml
         - name: Create changelog to publish to slack
