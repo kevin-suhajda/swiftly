@@ -103,6 +103,9 @@ workflows:
               
               # Get the name of the test .xml file so we can attach it to a Jira issue
               XML_TEST=$(find -f build/ios/test/*.xml)
+
+              # Get the Git commit message for this build
+              GIT_COMMIT_MESSAGE=$(git log --format=%B -n 1 $FCI_COMMIT)
               
               # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira. 
               # See https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/ for details on how to structure comments using Atlassion Document Format.
@@ -111,6 +114,7 @@ workflows:
               sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
               sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
               sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
+              sed -i.bak "s/\$GIT_COMMIT_MESSAGE/$GIT_COMMIT_MESSAGE/" .templates/jira.json
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUILD_VERSION/$BUILD_VERSION/" .templates/jira.json
               sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
