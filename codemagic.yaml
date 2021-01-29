@@ -85,8 +85,6 @@ workflows:
               #!/bin/sh
               set -e
               set -x
-
-              
               
               # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
               ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .url')
@@ -107,7 +105,12 @@ workflows:
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
               
               # Get the name of the test .xml file so we can attach it to a Jira issue
-              XML_TEST=$(find -f build/ios/test/*.xml)
+              if [ $ARTIFACT_TYPE == ".ipa" ]
+              then
+                XML_TEST_RESULTS=$(find -f build/ios/test/*.xml)
+              else
+                XML_TEST_RESULTS=$(find -f app/build/test-results/**/*.xml)
+              fi 
 
               # Get the Git commit message for this build
               GIT_COMMIT_MESSAGE=$(git log --format=%B -n 1 $FCI_COMMIT)
