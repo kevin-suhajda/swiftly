@@ -17,6 +17,7 @@ workflows:
           JIRA_AUTH: a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1
           JIRA_ISSUE: GEOM-1
           JIRA_TRANSITION_ID: 51
+          ARTIFACT_TYPE: ".ipa"
         xcode: 12.1
         cocoapods: default
       triggering:
@@ -85,7 +86,7 @@ workflows:
               set -e
               set -x
 
-              ARTIFACT_TYPE=".ipa"
+              
               
               # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
               ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .url')
@@ -153,7 +154,7 @@ workflows:
               fi  
         app_store_connect:                 
           apple_id: $APPLE_ID
-          password: $APP_SPECIFIC_PASSWORD 
+          password: $APP_SPECIFIC_PASSWORD
         email:
             recipients:
             - kevin@nevercode.io
