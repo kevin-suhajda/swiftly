@@ -63,7 +63,7 @@
                             },
                             {
                                 "type": "text",
-                                "text": "$GIT_COMMIT_MESSAGE"
+                                "text": " | $GIT_COMMIT_MESSAGE"
                             }
                         ]
                     }
