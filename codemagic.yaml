@@ -84,13 +84,15 @@ workflows:
               #!/bin/sh
               set -e
               set -x
+
+              ARTIFACT_TYPE=".ipa"
               
               # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
-              IPA_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .url')
-              IPA_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .name')
-              TYPE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .type')
-              BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .bundleId')
-              VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith(".ipa")) | .versionName')
+              ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .url')
+              ARTIFACT_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .name')
+              TYPE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .type')
+              BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .bundleId')
+              VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .versionName')
               
               BUILD_VERSION=$(( ${BUILD_NUMBER} + 80 ))
               
@@ -113,8 +115,8 @@ workflows:
               # See https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/ for details on how to structure comments using Atlassion Document Format.
               
               sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
-              sed -i.bak "s/\$IPA_NAME/$IPA_NAME/" .templates/jira.json
-              sed -i.bak "s/\$IPA_URL/$TEST_URL/" .templates/jira.json
+              sed -i.bak "s/\$ARTIFACT_NAME/$ARTIFACT_NAME/" .templates/jira.json
+              sed -i.bak "s/\$ARTIFACT_URL/$TEST_URL/" .templates/jira.json
               sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
               sed -i.bak "s/\$GIT_COMMIT_MESSAGE/$GIT_COMMIT_MESSAGE/" .templates/jira.json
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json

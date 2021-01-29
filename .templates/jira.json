@@ -168,7 +168,7 @@
                                         "content": [
                                             {
                                                 "type": "text",
-                                                "text": "$IPA_NAME"
+                                                "text": "$ARTIFACT_NAME"
                                             }
                                         ]
                                     }
@@ -188,7 +188,7 @@
                                                     {
                                                         "type": "link",
                                                         "attrs": {
-                                                            "href": "$IPA_URL"
+                                                            "href": "$ARTIFACT_URL"
                                                         }
                                                     }
                                                 ]
