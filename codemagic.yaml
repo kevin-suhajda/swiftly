@@ -105,7 +105,7 @@ workflows:
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
               
               # Get the name of the test .xml file so we can attach it to a Jira issue
-              if [ $ARTIFACT_TYPE == ".ipa" ]
+              if [ $ARTIFACT_TYPE = ".ipa" ]
               then
                 XML_TEST_RESULTS=$(find -f build/ios/test/*.xml)
               else
