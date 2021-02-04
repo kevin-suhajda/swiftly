@@ -11,7 +11,7 @@
                 "content": [
                     {
                         "type": "text",
-                        "text": "swiftly.ipa"
+                        "text": "Swiftly [$TYPE]"
                     }
                 ]
             },
@@ -23,7 +23,7 @@
                 "content": [
                     {
                         "type": "text",
-                        "text": "Build 1.0.0 (12)"
+                        "text": "Build $VERSION_NAME ($BUILD_VERSION)"
                     }
                 ]
             },
@@ -35,7 +35,7 @@
                 "content": [
                     {
                         "type": "text",
-                        "text": "com.nevercode.swiftly"
+                        "text": "$BUNDLE"
                     }
                 ]
             },
@@ -59,11 +59,11 @@
                             },
                             {
                                 "type": "text",
-                                "text": "a672eaf"
+                                "text": "$FCI_COMMIT"
                             },
                             {
                                 "type": "text",
-                                "text": " | Update Template"
+                                "text": " | $GIT_COMMIT_MESSAGE"
                             }
                         ]
                     }
@@ -153,7 +153,7 @@
                                         "content": [
                                             {
                                                 "type": "text",
-                                                "text": "2021/01/10"
+                                                "text": "$BUILD_DATE"
                                             }
                                         ]
                                     }
@@ -168,7 +168,7 @@
                                         "content": [
                                             {
                                                 "type": "text",
-                                                "text": "swiftly.ipa"
+                                                "text": "$ARTIFACT_NAME"
                                             }
                                         ]
                                     }
@@ -188,7 +188,7 @@
                                                     {
                                                         "type": "link",
                                                         "attrs": {
-                                                            "href": "https://google.com"
+                                                            "href": "$IPA_URL"
                                                         }
                                                     }
                                                 ]
