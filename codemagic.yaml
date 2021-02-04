@@ -52,16 +52,16 @@ workflows:
             set -x
             cd $FCI_BUILD_DIR
             agvtool new-version -all $(($BUILD_NUMBER + 80))
-        - name: iOS test
-          script: |
-            #!/bin/sh
-            set -e
-            set -x
-            xcode-project run-tests \
-              --workspace $XCODE_WORKSPACE \
-              --scheme $XCODE_SCHEME \
-              --device "iPhone 12"
-          test_report: build/ios/test/*.xml
+        # - name: iOS test
+        #   script: |
+        #     #!/bin/sh
+        #     set -e
+        #     set -x
+        #     xcode-project run-tests \
+        #       --workspace $XCODE_WORKSPACE \
+        #       --scheme $XCODE_SCHEME \
+        #       --device "iPhone 12"
+        #   test_report: build/ios/test/*.xml
         - name: Create changelog to publish to slack
           script: |
             if [[ -z ${FCI_PREVIOUS_COMMIT} ]]
@@ -101,7 +101,7 @@ workflows:
               BUILD_DATE=$(date +"%Y-%m-%d")
               
               # Escape forward slash characters in URL to prevent errors when using sed to replace the template value
-              TEST_URL=$(echo "${IPA_URL}" | sed 's#/#\\/#g')
+              TEST_URL=$(echo "${ARTIFACT_URL}" | sed 's#/#\\/#g')
               
               # Get first 7 digits of commit number
               COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
@@ -116,19 +116,30 @@ workflows:
 
               # Get the Git commit message for this build
               GIT_COMMIT_MESSAGE=$(git log --format=%B -n 1 $FCI_COMMIT)
+
+              echo "ARTIFACT_NAME is set to $ARTIFACT_NAME"
+              echo "ARTIFACT_URL is set to $ARTIFACT_URL"
+              echo "TEST_URL is set to $TEST_URL"
+              echo "TYPE is set to $TYPE"
+              echo "BUNDLE is set to $BUNDLE"
+              echo "VERSION_NAME is set to $VERSION_NAME"
+              echo "BUILD_VERSION is set to $BUILD_VERSION"
+              echo "BUILD_DATE is set to $BUILD_DATE"
+              echo "COMMIT is set to $COMMIT"
+              echo "GIT_COMMIT_MESSAGE is set to $GIT_COMMIT_MESSAGE"
               
               # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira. 
               # See https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/ for details on how to structure comments using Atlassion Document Format.
               
-              sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
               sed -i.bak "s/\$ARTIFACT_NAME/$ARTIFACT_NAME/" .templates/jira.json
               sed -i.bak "s/\$ARTIFACT_URL/$TEST_URL/" .templates/jira.json
-              sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
-              sed -i.bak "s/\$GIT_COMMIT_MESSAGE/$GIT_COMMIT_MESSAGE/" .templates/jira.json
+              sed -i.bak "s/\$TYPE/$TYPE/" .templates/jira.json
+              sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
               sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
               sed -i.bak "s/\$BUILD_VERSION/$BUILD_VERSION/" .templates/jira.json
-              sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
-              sed -i.bak "s/\$TYPE/$TYPE/" .templates/jira.json
+              sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
+              sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
+              sed -i.bak "s/\$GIT_COMMIT_MESSAGE/$GIT_COMMIT_MESSAGE/" .templates/jira.json
 
               # Add a comment to Jira 
               # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-comments/#api-rest-api-3-comment-list-post for details
