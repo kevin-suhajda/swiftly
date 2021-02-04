@@ -6,4 +6,4 @@ sed -i.bak "s/\$GIT_COMMIT_MESSAGE/Update Template/" .templates/jira.json
 sed -i.bak "s/\$VERSION_NAME/1.0.0/" .templates/jira.json
 sed -i.bak "s/\$BUILD_VERSION/12/" .templates/jira.json
 sed -i.bak "s/\$BUNDLE/com.nevercode.swiftly/" .templates/jira.json
-sed -i.bak "s/\$TYPE/XYZ/" .templates/jira.json
+sed -i.bak "s/\$TYPE/XYZ/" .templates/jira.jsoncl
