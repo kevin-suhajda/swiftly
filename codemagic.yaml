@@ -85,6 +85,8 @@ workflows:
               #!/bin/sh
               set -e
               set -x
+
+              ARTIFACT_TYPE=".ipa"
               
               # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
               ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("$ARTIFACT_TYPE")) | .url')
