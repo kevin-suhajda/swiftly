@@ -126,6 +126,7 @@ workflows:
               echo "BUILD_VERSION is set to $BUILD_VERSION"
               echo "BUILD_DATE is set to $BUILD_DATE"
               echo "COMMIT is set to $COMMIT"
+              
               echo "GIT_COMMIT_MESSAGE is set to $GIT_COMMIT_MESSAGE"
               
               # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira. 
