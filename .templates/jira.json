@@ -188,7 +188,7 @@
                                                     {
                                                         "type": "link",
                                                         "attrs": {
-                                                            "href": "$ARTIFACT_URL"
+                                                            "href": "$IPA_URL"
                                                         }
                                                     }
                                                 ]
