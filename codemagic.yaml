@@ -89,11 +89,11 @@ workflows:
               ARTIFACT_TYPE=".ipa"
               
               # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
-              ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith($ARTIFACT_TYPE)) | .url')
-              ARTIFACT_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith($ARTIFACT_TYPE)) | .name')
-              TYPE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith($ARTIFACT_TYPE)) | .type')
-              BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith($ARTIFACT_TYPE)) | .bundleId')
-              VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith($ARTIFACT_TYPE)) | .versionName')
+              ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .url')
+              ARTIFACT_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .name')
+              TYPE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .type')
+              BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .bundleId')
+              VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .versionName')
               
               BUILD_VERSION=$(( ${BUILD_NUMBER} + 80 ))
               
