@@ -547,8 +547,8 @@
 			baseConfigurationReference = 8E1C0EB75897C805F8293C11 /* Pods-swiftly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Suhajda (C4LL465B8L)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftly/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3BFA7A6ZR;
@@ -560,7 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Swiftly Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -571,8 +571,8 @@
 			baseConfigurationReference = 598075D6C5F322AF6B941B1C /* Pods-swiftly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kevin Suhajda (Z3BFA7A6ZR)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftly/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3BFA7A6ZR;
@@ -584,7 +584,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.codemagic.swiftly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Swiftly Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
