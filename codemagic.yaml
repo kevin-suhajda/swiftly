@@ -170,9 +170,13 @@ workflows:
         #       else
         #         "No release_notes.txt available to upload to JIRA"
         #       fi  
-        app_store_connect:                 
-          apple_id: $APPLE_ID
-          password: $APP_SPECIFIC_PASSWORD
+        # app_store_connect:                 
+        #   apple_id: $APPLE_ID
+        #   password: $APP_SPECIFIC_PASSWORD
+        scripts:
+        - name: iOS Publish TestFlight External
+          script: |
+            app-store-connect publish -t
         email:
             recipients:
             - kevin@nevercode.io
