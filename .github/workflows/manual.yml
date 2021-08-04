@@ -26,6 +26,11 @@ jobs:
       XCODE_WORKSPACE: "swiftly.xcworkspace"
       XCODE_SCHEME: "swiftly"
       BUNDLE_ID: "io.codemagic.swiftly"
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.APP_STORE_CONNECT_KEY_IDENTIFIER }}
+      APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY }}
+      CERTIFICATE_PRIVATE_KEY: ${{ secrets.CERTIFICATE_PRIVATE_KEY}}
+      APP_STORE_APP_ID: ${{ secrets.APP_STORE_APP_ID}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
