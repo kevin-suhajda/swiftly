@@ -28,7 +28,7 @@ workflows:
       scripts:
         - name: Install CLI Tools
           script: |
-            pip3 uninstall codemagic-cli-tools
+            pip3 uninstall -y codemagic-cli-tools
             pip3 install codemagic-cli-tools
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
