@@ -10,16 +10,10 @@ workflows:
           APP_STORE_CONNECT_ISSUER_ID: 4b453230-51cb-40b6-bfbb-60e71ddaa13a
           APP_STORE_CONNECT_KEY_IDENTIFIER: LY64D5F898
           APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmdFUzBpU0pkb3ZRR2g2SmZ1RGpvM09qUElDOTUyZ3dFa1RoN0ZrM050cmFiMEQ3VWUzM2xxYUZyNHlfSFJ6TGpDTUI0LUhBVVdiQkJmclgwZTJHYkRaM2tKVDMyczAwNzJKdnBraHVjUEQ2UzlmTlVHVGUwUTU2TFI5MzNZa0lRcWF1eUhJNE9lSWkzakFIU1ZkaDduNFc0Q0JoQXB0WDdycDVtYWhPdHRyVHNGaDlXajNBQnlBZVQzTW1YUlRiLW51d0hKN3REc0tnc0xpQU0tcjBhbzVJTE5pSVU0RjNybDVfM3FTaGc3dy16MWxZa2tNS3RaM242T0tqckFQaHQ1WU5rZ1VmcnJveUFkbzVWU250X2lwckt2Yk1EZWkzTFN6QVZKM2xXYUw0XzhDQVdSSlluei1JRjBnTjNaMjk4ZnJxX3JPOVlsN3Z1LWpEZGxCbThNUW4ydl9qYThZYjB2aHMyd2h4TEpTMkZ4T2NWWnBrUU9nQ2NoRGM3clV1MW9ZdE9Hb2phT2dkQklnVjlsOUw5Qzc0TFhDOHNEMElqYVBwcGdac2NkRUtTZFAwYz0=)
-          # CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmZxN2RMb3BPMDhoRXFvVllFamFLdWF6TVhSVnJtbDVEX0hzNVg5NGJZSEdJcnQ4aUtuX2RSSXQ3Qm1zN0Q1Zk9oeVBhTmttamx5Y0JkRU5VQVZZRmZtSjJyMG5mZFNnNm9yRTRMTV9WcTZYMWxtUUtGb0pZMm9tV3VPbnA1X3VhOHMzUFFsWk5OVUpZQzNCb21GU0IxaFYyMmRSOUkzV1U4b1Vrdlg5MVl2bVNhYXctdXhxVDU1YWg1eVk5YjlTQ3NOYmI0MnRWZ0xGVERwdkZPdV9LZHY0NDFGX1Via0VFaDhXd1dzTFQ1WmJuX25kMGJuUlRkSW1naFdrRHlHWEhJNzE2ZGRnOFBTNDlLV2pwOEZRS29hcjFhRVM3RUJheEFsR3Bwc2J1c1QxZEZRUURvaWVDUVJ0TG5Ga0l2MGtTakx0NGtWQmNjY1puRVNPZGZSWHhPeFBCVDc4aGg1TGw3c0h4S1ZvYnpxOXpZbHV3M0Q2TGVDd25tQTBHZkhBYXpSN0pzVVJmbnlpRDlJUFN2dGdnZkpLV3pEQWZ4TUJxWDgtRTlJQXBzaEVESnhkTTJUUC1MS0phb2hDaVRseWI0bjJvVFl4V25ueGZSZDBVblBfbmN4cVVEelM1RmY5Tk5HYzZCNUw2SUpWMnFlTC04WmR6QW9ldmRVdDJVbWNuZE5fYU1aZE9kRFQybXFsWnhDSEFMd2VCUXAwTFhKazUtRGtneXBhSFhCaVFVQnl3VjN3alo3N19IdEJ1MTFnMXoyVGVWNE5DNHAzZkV2RUk5bUUtaHdiZTRqeUoxSjdaN3V1bGtuZmxPZ3NKOG04WlZjR2lRTDRlcEkzczA4MWoyS2d4V3RPQUR2MTJpamkwZUE4dURxc2dXMzRtaTZ1bWhiWnNTV2RUaDFhRThfZHNBMERENHJTeHBkdTc2cm9PT1FBWVhDaFEyREQ1OTBJUUVYdnZVTzZWclFNc1o3aUs5emQteEgzSkUwcU43YVYtRXc0ZkF1aDVMWktGc0lEbHJGREthTnhOQ0FiMWlLZXNBakxid0k3R0k1SHNQb2FNend4YmVEbGFrZzZodGh1Z2FHWk9SeU15LXZuMVRYeEtVamRtTlR2RGRHVm1SVFlvY1dZTHN0dlY0elJrUnllTnBqRlY3UWdrTi1XMDZnRWQwUHgxR3JfTElvVnZ1VE5CVmRPQ3A2SDhxSXVrQ0VDQ0ZvdWhYUEdNLXY1WFpDUFE2N0treWhmNXl4SG4tSGpjTzVLd1BZdzBLZVlFVTQ5UHBpYmFMb1M5Ukl1dkFtVk1MNkZETFVvYmQ0T29nN1Bwb01lR2JRT3dmNVgzM2NzUWJFU3ptXzh1WElsSjVRa3Vtd3RwQnU4RzI4WnI2QzltVzNyYzBxTm5UT3A0LWhnOG1kNTRJRVBkanNlY3B5QUx4X0FSYnlLMndsTXRXZXZielVPVUtIb1lMZXFQS3NEVFBBemlXaUFPYkpmYUJ1Y2otNkNJelpYVG5XcEJ4MVItYy1FcDdnT1RtSVdDYXRZc3hvcnBOVGw0RGNPY1ptUHBsOHhkUmFibUNuUXBtTXlaOFgyT1E2NmdIelhJWENxZVVzdXNuX3F1Tlh1MXg2aVJFR3pCVTdEc0wwc1dUR0ljTHN6ZHNuUFpHZUp0alpmNGkwaW1sSW1aVVVKVnp0YUJOODFOeS1IbG5USGVyR0NUUUY2cXFnRGV2eUpxMEdrUUt1dkNKNVFSTTRSOUJoMmd5RTAwQjlVSXI1ekt0SU50SDFjQmpodXZGNlVCNHB0QW5Sa0NNOFkzYkYxRW1tNHZyZzQ4Zmt3VGNUUEl5eHJNdU96UlF5QW00Y0ItLVFzeS1rSF9wSmFmeF9XUmlrT2dQclF4dWlKT1lJZDZfN0NSenRzaExVMmYyYVZKWkZBSEdPUUV3ZlZKZDJieFRTNGR3TldPZ2xrdTlwN3VURlgwRVZZcmhWaXNfc1ZxWXpuTUJFODdaNTB3WmRfNWtPenFwbnpoT1Y5Ujc5YlhEZFZxYXJWTXNxdHlxX2R0ME94ZmdfUzZtMk9oTjBLZWNXUEItMXJlZHNwYzJwQkJ3MXhyWk8zMGt6MXhYOHlGMGd2TjFqaC15N3pRWFZvUFFPVnhGV21STzBXcTVLTUxDM3NJM1pQUk4wc2R4d3hsSC0tckxESzdmeWlvaXk0ZGJqX0U3NW10eGJJcDI3U2VDaW10QWFwcFZ2RmFUMk5KVExLc3NkcGtFUkh3UTd3N2RhdWJvMDZlbDBwc0QwZGdUQTJKSnJEMTBCc0NVblI3Qm5zSjc2VUEtUExEQk92U0U5MF9JWHVxQjJsTURKZVFsVmFGNTRLbmptdmRkLW5BTGVfNFh4S19iVGNrOXJWdHVVNlFycXVYcnRFN2otN2ZyellSR29mVHpWbEUzc0Z3bUQydmQtV3lGUy1OaTV2cldtSXlXTklaTDdHaHFQZVU1ZlRFaWlaS2RYM0dYNmdtNElWenNVQlNQUkhKSGR1WHVHMGpDQWdhaHZkUWVlWklkeHdfS2NISXptRVlwUDRsTEZlM190UkhJTVhtZGVDUDM5d3VZMzh4VXRzTlpTVmh4NVM4empFTllnb0M3MWloam1YWEFwTmRkMnVCMzhYRUJTcDFka2lQSi1uY01vWUdQN01vWUxRQktoSzllN1h6Tk1FdVBGVXB1X3daTGRjMHBYd2tfWDBHUXoyNm1MYUt4cHM5TUtsY0xRWGVFUldTa2U1d0ZrY2ZsdkNrMU5LV0NVUDBYcVFLRWd6SGtBbURndE4tSkU3T3dRTExyZXJVUUVUUGdRX3ROR1hfOU00UUI2Zk5aVWMyM29Ga1VqN3VWNFhwTFZvSDZ6Q0twckY4d2NxbllXeThVcDNhVXEzZVdMSkxjUF9IRzdpbWdvWFBueTFQclJUamFyTjZhLXFuVG1RWExjdFpFalctbFRLV2kwUnppeDAyOWQ5a1JNREhiNm5XdjJXaXVrLXZpblhuRTZzUmRaTDkzaEhiUi1peENrcjFxRVd5eWNiYU1KYU5ncXF2R3JYS1pSNlZsTzF3RHJwRmZmV3lm)    
           CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmd1THhqZ0lQQkhkOFotZ1NYLW9NWkc2U2ctVWtxLTRaYTNLZ1FBT2JTZzBLTmtwZGNZZ0VWSk9mYlkwSGhKcHRLRVBxWFRfN0szNEZPOVVDMjM0enFRdUhYNmY5Qm1pM1dzMjJ0b0tKbUxXdFpfakRFM2ZCQVRJZW9LeUtfMF9xTDJRakFyYndOSE1pbmRROVEzQWc4UWVERTl2enVTNkplZnpOYkxQM2lqbEtHUGVybW0tQmhwdGpfZV9CdFJEOWttUnFhZFhwWldLVjdwLWJOMXBTa29fOEhrRHhiRHRXYmxIODBlbWI0V0VnSnM0SFA5QklNUGRkQTdoTVR2MnQtVEctM1JpOUhkcU5oY0hjTVJodThXcVlBUmg0TEhvdk9VWDAzb0ZIQzRaLUdCZV9jS1JaTDVBVHBoY2NkUUg5ZWFhbXpBNzNzSkZSSEtYcVppVnh6X01lTmtNVlJSeFk2M0ZxV09zcUZqZXRiVG5iSTdjQy1hMHFFTXR2QmNmUUZRZ1JKaUM1RUJYeURFWF9rcXJxNk5OWHVBSmk5aEc4Q1J3VWFaVElpTTBqZm5rODVOM2JMOWxuTl9ib3BtckswZWpUcmlVRmtXdG1EeFBxOEFrdGR0UHhlMTVVVGRuOUFORWlMYjhhUEtBdVRLWmlCM0pXQjJfMlM2Ry00N19IZ2ZlbUYyWGs5WnBiWVZ6VVBReEoxeW5EeGh3MFZpSm9LNXdiRFk3TFRWX281Zm1MUUNsVlhGaFBMelBfbTBuck4xRThRS190WVRaWmtUYm9RcERGMFAtTk90Uk5NMXR3RzlFT2J2MjhqSGNBejladW9Fa0d0UkJMUldjdHBydWxycU13TmdPMjhxVVhkMjhtLXozS2tqNzctVXlYR1BmbGJRZmplcHRybEhTTldjc3N2dXQwNUVvMGhGZ1pHckxuOWhRXzRNdlFNMzZVQWp6bC0zOTlyRFRUZ3ZpRGZ4UFlZUHpma0lrOENpV3lobkxtWU1YVnNPNnQwdFI3YUtXTzRleHFmOW56WTRXbjNXVUFkV0dkVjdvc3poNWx6a2hsTWlVZHhFbEVuTlVtdlJTNWRWZHhmOTdRcHQta2NmdHVNVzltSjJkY2huRFdwOVd3NFpYMm40Vm5RLXhILU9kSjBiblg2SU9tRm1yTUhmOTNMMm1hcU1YRFo5REUzcTlWTDZabkQ5aFlJc3dCejR4bW9NbzZGMUlYQW9WN0JYaVMxbE43Q2Y0VTFhc2h3TFdLQ2VoVzA5dE9jMFNDeTRnZC16Tmwtcm1kdXFjcVpnQ3hZQXV2LUNzZmFTekhxak9Sb3k4TDVGa191WWYzdmt0aXJDMnVLejNtU2FvTElseGc5ZU1YQi1WQkMzMXdwWG5BYWl3QlU3TVhQTDltblNzZzFySDhLNzF3R1U3NnVHelZrSWhUWkllM185c3VrQ2VZZnE0Y3MyS1dlOVQ2cVdJeHhPZTNET19jVHZaNDUyLVBBX0dUOVQ1b1gzQUNhU1Bia3h3dk9DdnZwSm5HdFNzTTI2Y3ZJUlpRVVp1TGhCN0h4OE9pcHhLOUxHcUpYN0c2YmRBTzcyczNsRjliMUdNbEFBODNGMU1BTzFnX0hXTzAwa0VnOC16TlJwQW1xZTVGWXV2ZHplN1V6SmtmM3RqRkR5SV8zcDJpSnYyTGtxWkFMeVRDeWtDTHlvbXNXV0tGbU5CbW1NRFVWZXVqRzRHLVBVNTNDRk9CUE9JUXN4dkJ2N19mMElsN3BucjZRbHRfM3NxZENKRGpTVzhwYk1YdUl5SGJ2Z0FHY2Y3YU5zdlFqTmJwQjNuTllLdVJ2VW4xdUZpNXp1ZnF0a0wyN1Zrd3JGbmRBSmlGWVl3UHlSZ0NjY2JUSDJHaE9hbjVqM2hMOExRelZGdEVGaUxJYWozaDJvdFFDVGtUa0tTV0J3R3V6ODl1YmZ5eVFpaTdRUEwxTjkyWXhOSjh3b3RvTmxkV2YyemdMSi1ZaURLQzlQZUMtSEVCOTJsZFV1MzYxaDhadmRhUFJhZ3lXVTJDbzl5WGtBRWtRWjhpUG5EMFc0TFVSVDlIazlhU1RSTFdyc0xjTnVkdmJpM01kdlZtU0hOdEFoVGNEUVhIQ3VaSm0xZ28ybjF1Sjl5eHJ2WGtKTWtBZ1I4ZlE5Q1ZleDc0OGdwdVlJRFB5cmpYVkRhMzJkd0ZBZFJlVXNvdkxrMEVwLV91SE9uTFA3Q0R4VFRuQW9fMzlYelNPRnRZcEpSQW5wVFV3enRpeXBPVENfR05icndHT1B3SVBxd0lIMmxpQWlxZ3ktZFBvd0tKSzJuRUI0V0tMcjM2a2NyUFZBX2JyTUs3cGRVcm1lY01wNW5FU29SYW40dzRzVU5KdWhxdGdUS0FhX0gwdGIxNWVHRmVXUmZEM0dKbTlrM0xyV2RISFNxVXpXUVd6d2FfS3o3S01QNHFqT1dETVZ5YVpfaHhNNVJ5VTd0cTFmOWNpWXZ6LTFDWDcxaW5hMHpVWk1lSEZrWW5hbER5cG0zN2F3anYyQTRQdEJEbnIxbk45UGd5eDR6SlpyMG1KdXhnV3VsN2stQ2NtVGlHdEh4cDRhcWdiMG1URE04OUJ6djJhTFVFd3h0cXppRkJISEhDZkhpQzdSbkVlYllFRzhhRHJaLXpkbVR0TVFPdVlENVJiUndVZmJ0N1pKRU1rZVVkR0JmV1doSmVhdDZGTHJsaU9icUZrb1NadEpNSUpwTmQ2NXZ4WC13a3NVN3JCLU1GejYtMzU5WUlNVmZ1WWFBNVVaRG9ZaDRUUG52dEZvUVFDYkdJU3loSlFHRzhFbzlialk3YTZrMEtyNmI4bGxsa19FLUl2ODBVaXpPbFlpLVJiNDEzYjRCcU02RDNyOU1BR3VuRlNncnAzTXQxQ1EycWx5cW5xUHVMQXJTd2VUa0lYTFdiRlo5eDZnYjFIMnVGc1hTUkRsYTROY1ZORzhSNmtuWkdjS1NVSlRrdUZrNGt0Z2x5WFB5NGFXdVh4c3ZIbTdXWnBndUpsemRsQ09TN25KZXEyVGtPS2VUNG13Rl91cjRRQWw0ZTVQT3dt)
           APP_SPECIFIC_PASSWORD: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9) 
           APPLE_ID: Encrypted(Z0FBQUFBQmdFOTV6Z0RwbU9HaE5HMFNlLUlmNWtkRnE1YmNxbVBVX2pDb3BUSjZ2R3gwSGpZMzlYVklXQlEwTEZHZWZoUkJ2OGRacDdCZjNFR3UzUFFxRDE2NVd6Y1dRYWpzdnJzeFRtRDRGMnkzRXI1RTFaVjQ9)
           APP_STORE_APP_ID: 1527433878
-          JIRA_BASE_URL: "suhajda.atlassian.net"
-          JIRA_AUTH: a2Z2c3VoYWpkYUBnbWFpbC5jb206R3ZrRmtqazl5OVBiNm9WZ3NYeUsxQTQ1
-          JIRA_ISSUE: GEOM-1
-          JIRA_TRANSITION_ID: 51
-          ARTIFACT_TYPE: ".ipa"
         xcode: 12.5
         cocoapods: default
       triggering:
@@ -32,15 +26,15 @@ workflows:
             include: true
             source: true
       scripts:
+        - name: Install CLI Tools
+          script: |
+            pip3 install codemagic-cli-tools
         - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
           script: |
             keychain initialize
         - name: Fetch signing files
           script: |
-            # For information about Codemagic CLI commands visit: https://github.com/codemagic-ci-cd/cli-tools/blob/master/docs/app-store-connect/README.md
-            # For details about the --type paramater below - https://github.com/codemagic-ci-cd/cli-tools/blob/master/docs/app-store-connect/fetch-signing-files.md#--typeios_app_adhoc--ios_app_development--ios_app_inhouse--ios_app_store--mac_app_development--mac_app_direct--mac_app_store--mac_catalyst_app_development--mac_catalyst_app_direct--mac_catalyst_app_store--tvos_app_adhoc--tvos_app_development--tvos_app_inhouse--tvos_app_store    
             app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
-            # app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_ADHOC --create
         - name: Use system default keychain
           script: |
             keychain add-certificates
@@ -53,25 +47,6 @@ workflows:
             set -ex
             cd $FCI_BUILD_DIR
             agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
-        # - name: iOS test
-        #   script: |
-        #     #!/bin/sh
-        #     set -e
-        #     set -x
-        #     xcode-project run-tests \
-        #       --workspace $XCODE_WORKSPACE \
-        #       --scheme $XCODE_SCHEME \
-        #       --device "iPhone 12"
-        #   test_report: build/ios/test/*.xml
-        #
-        - name: Create changelog to publish to slack
-          script: |
-            if [[ -z ${FCI_PREVIOUS_COMMIT} ]]
-            then
-              echo "No finished builds found to generate changelog" | tee release_notes.txt
-            else
-              echo "$(git-changelog generate --previous-commit $FCI_PREVIOUS_COMMIT)" | tee release_notes.txt
-            fi
         - name: Build ipa for distribution
           script: |
             xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
@@ -79,109 +54,11 @@ workflows:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
       publishing:
-        # slack:
-        #   channel: "#builds"
-        # scripts:
-        #   - name: Post to JIRA
-        #     script: |
-        #       #!/bin/sh
-        #       set -e
-        #       set -x
-
-        #       ARTIFACT_TYPE=".ipa"
-              
-        #       # Get URL, Name, Bundle Id and Version name from $FCI_ARTIFACT_LINKS
-        #       ARTIFACT_URL=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .url')
-        #       ARTIFACT_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .name')
-        #       TYPE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .type')
-        #       BUNDLE=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .bundleId')
-        #       VERSION_NAME=$(echo $FCI_ARTIFACT_LINKS | jq -r '.[] | select(.name | endswith("'"$ARTIFACT_TYPE"'")) | .versionName')
-              
-        #       BUILD_VERSION=$(( ${BUILD_NUMBER} + 80 ))
-              
-        #       # Set the build date
-        #       BUILD_DATE=$(date +"%Y-%m-%d")
-              
-        #       # Escape forward slash characters in URL to prevent errors when using sed to replace the template value
-        #       TEST_URL=$(echo "${ARTIFACT_URL}" | sed 's#/#\\/#g')
-              
-        #       # Get first 7 digits of commit number
-        #       COMMIT=$(echo "${FCI_COMMIT}" | sed 's/^\(........\).*/\1/;q')
-              
-        #       # Get the name of the test .xml file so we can attach it to a Jira issue
-        #       # if [ $ARTIFACT_TYPE = ".ipa" ]
-        #       # then
-        #       #   XML_TEST_RESULTS=$(find -f build/ios/test/*.xml)
-        #       # else
-        #       #   XML_TEST_RESULTS=$(find -f app/build/test-results/**/*.xml)
-        #       # fi 
-
-        #       # Get the Git commit message for this build
-        #       GIT_COMMIT_MESSAGE=$(git log --format=%B -n 1 $FCI_COMMIT)
-
-        #       echo "ARTIFACT_NAME is set to $ARTIFACT_NAME"
-        #       echo "ARTIFACT_URL is set to $ARTIFACT_URL"
-        #       echo "TEST_URL is set to $TEST_URL"
-        #       echo "TYPE is set to $TYPE"
-        #       echo "BUNDLE is set to $BUNDLE"
-        #       echo "VERSION_NAME is set to $VERSION_NAME"
-        #       echo "BUILD_VERSION is set to $BUILD_VERSION"
-        #       echo "BUILD_DATE is set to $BUILD_DATE"
-        #       echo "COMMIT is set to $COMMIT"
-              
-        #       echo "GIT_COMMIT_MESSAGE is set to $GIT_COMMIT_MESSAGE"
-              
-        #       # Populate the values in the .json template which will be used as the JSON payload that will be set as a comment in Jira. 
-        #       # See https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/ for details on how to structure comments using Atlassion Document Format.
-              
-        #       sed -i.bak "s/\$ARTIFACT_NAME/$ARTIFACT_NAME/" .templates/jira.json
-        #       sed -i.bak "s/\$ARTIFACT_URL/$TEST_URL/" .templates/jira.json
-        #       sed -i.bak "s/\$TYPE/$TYPE/" .templates/jira.json
-        #       sed -i.bak "s/\$BUNDLE/$BUNDLE/" .templates/jira.json
-        #       sed -i.bak "s/\$VERSION_NAME/$VERSION_NAME/" .templates/jira.json
-        #       sed -i.bak "s/\$BUILD_VERSION/$BUILD_VERSION/" .templates/jira.json
-        #       sed -i.bak "s/\$BUILD_DATE/$BUILD_DATE/" .templates/jira.json
-        #       sed -i.bak "s/\$FCI_COMMIT/$COMMIT/" .templates/jira.json
-        #       sed -i.bak "s/\$GIT_COMMIT_MESSAGE/$GIT_COMMIT_MESSAGE/" .templates/jira.json
-
-        #       # Add a comment to Jira 
-        #       # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-comments/#api-rest-api-3-comment-list-post for details
-        #       curl -X POST https://$JIRA_BASE_URL/rest/api/3/issue/$JIRA_ISSUE/comment -H "Authorization: Basic $JIRA_AUTH" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data @.templates/jira.json | jq "."
-              
-        #       # Transition Jira issue to another status 
-        #       # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-issueidorkey-transitions-post for details
-        #       curl -X POST https://$JIRA_BASE_URL/rest/api/3/issue/$JIRA_ISSUE/transitions -H "Authorization: Basic $JIRA_AUTH" -H "X-Atlassian-Token: nocheck" -H "Content-Type: application/json" --data '{"transition":{"id":"'"$JIRA_TRANSITION_ID"'"}}' | jq "."
-              
-        #       # Attach XML test results to the Jira issue 
-        #       # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-attachments/#api-rest-api-3-issue-issueidorkey-attachments-post for details
-              
-        #       if [[ -z ${XML_TEST_RESULTS} ]]
-        #       then
-        #         echo "No test results available to upload to JIRA"
-        #       else  
-        #         curl -X POST https://$JIRA_BASE_URL/rest/api/3/issue/$JIRA_ISSUE/attachments -H "Authorization: Basic $JIRA_AUTH" -H "X-Atlassian-Token: nocheck" -F "file=@$XML_TEST_RESULTS"  | jq "."
-        #       fi
-
-        #       # Attach Release Notes to the Jira issue 
-        #       # See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-attachments/#api-rest-api-3-issue-issueidorkey-attachments-post for details
-              
-        #       if [[ -e release_notes.txt ]]
-        #       then 
-        #         curl -X POST https://$JIRA_BASE_URL/rest/api/3/issue/$JIRA_ISSUE/attachments -H "Authorization: Basic $JIRA_AUTH" -H "X-Atlassian-Token: nocheck" -F "file=@release_notes.txt"  | jq "."
-        #       else
-        #         "No release_notes.txt available to upload to JIRA"
-        #       fi  
         app_store_connect:
           api_key: $APP_STORE_CONNECT_PRIVATE_KEY          # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
           key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER        # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
           issuer_id: $APP_STORE_CONNECT_ISSUER_ID          # Alphanumeric value that identifies who created the API key, can also reference environment variable such as $APP_STORE_CONNECT_ISSUER_ID
           submit_to_testflight: false                 
-        #   apple_id: $APPLE_ID
-        #   password: $APP_SPECIFIC_PASSWORD
-        # scripts:
-        # - name: iOS Publish TestFlight External
-        #   script: |
-        #     app-store-connect publish -t
         email:
             recipients:
             - kevin@nevercode.io
