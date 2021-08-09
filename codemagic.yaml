@@ -47,7 +47,7 @@ workflows:
             # app-store-connect publish --beta-build-localizations=@file:whats_new.json 
         - |
           # Generate debug build
-          xcodebuild build \
+          xcodebuild clean build test \
           -workspace "$XCODE_WORKSPACE" \
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
