@@ -50,10 +50,10 @@ workflows:
           xcodebuild build \
           -workspace "$XCODE_WORKSPACE" \
           -scheme "$XCODE_SCHEME" \
-          # -sdk iphonesimulator \
-          # -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0' \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0' \
           -derivedDataPath Build/ \
-          # -enableCodeCoverage YES \
+          -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO 
           bash xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ > sonarqube-generic-coverage.xml
         - |
@@ -72,8 +72,9 @@ workflows:
           -Dsonar.cpp.file.suffixes=- \
           -Dsonar.objc.file.suffixes=-
       artifacts:
-        - build/ios/ipa/*.ipa
+        # - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       publishing:
         # app_store_connect:
         #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY          # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
