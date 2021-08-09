@@ -4,7 +4,7 @@ workflows:
       instance_type: mac_mini
       environment:
         vars:
-          XCODE_WORKSPACE: "swiftly.xcworkspace"
+          XCODE_PROJECT: "swiftly.xcodeproj"
           XCODE_SCHEME: "swiftly"
           BUNDLE_ID: "io.codemagic.swiftly"
           APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmhFWGpKQXlFVUZ1bzM3Z05oSWFOLTVOZ3JwYXg1RzM4M2NTWEV2SWh4alhaOXE3bTh3WTVsZWZvOVFJRGVVc3RaZTVtZEpnazNNRXZfUmFCOFE5WkFvTkIzbkJKM25GU3BxR243UU1rb1BUQ3RFVWhCWUdWcmVRUFFrU29TeFdHNDkyT3Y=)
@@ -35,26 +35,28 @@ workflows:
         - name: Codemagic CLI Tools build
           script: |
             #!/bin/sh
-            set -ex
+            # set -ex
             # pip3 install codemagic-cli-tools # The Codemagic CLI tools are already installed on Codemagic servers
-            keychain initialize
-            app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
-            keychain add-certificates
-            xcode-project use-profiles
+            # keychain initialize
+            # app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+            # keychain add-certificates
+            # xcode-project use-profiles
             # agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
             # xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
             # Use Codemagic to publish to take advantage of asynchronous Magic Actions
             # app-store-connect publish --beta-build-localizations=@file:whats_new.json 
         - |
           # Generate debug build
-          xcodebuild clean build test \
-          -workspace "$XCODE_WORKSPACE" \
+          xcodebuild \
+          -project "$XCODE_PROJECT" \
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.0' \
           -derivedDataPath Build/ \
           -enableCodeCoverage YES \
-          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO 
+          clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - |
+          # convert coverage report to sonarqube format
           bash xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ > sonarqube-generic-coverage.xml
         - |
           # Generate and upload code analysis report
@@ -73,7 +75,7 @@ workflows:
           -Dsonar.objc.file.suffixes=-
       artifacts:
         # - build/ios/ipa/*.ipa
-        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+        # - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       publishing:
         # app_store_connect:
