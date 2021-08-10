@@ -7,13 +7,13 @@ target 'swiftly' do
 
   # Pods for swiftly
 
-  target 'swiftlyTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  # target 'swiftlyTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
 
-  target 'swiftlyUITests' do
-    # Pods for testing
-  end
+  # target 'swiftlyUITests' do
+  #   # Pods for testing
+  # end
 
 end
