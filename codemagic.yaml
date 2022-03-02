@@ -75,7 +75,7 @@ workflows:
         # - build/ios/ipa/*.ipa
         # - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-      publishing:
+      # publishing:
         # app_store_connect:
         #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY          # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
         #   key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER        # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
