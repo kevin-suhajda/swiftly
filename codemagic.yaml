@@ -4,7 +4,7 @@ workflows:
       instance_type: mac_mini
       environment:
         vars:
-          XCODE_WORKSPACE: "swiftly.xcworkspace"
+          XCODE_PROJECT: "swiftly.xcodeproj"
           XCODE_SCHEME: "swiftly"
           BUNDLE_ID: "io.codemagic.swiftly"
           APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmhFWGpKQXlFVUZ1bzM3Z05oSWFOLTVOZ3JwYXg1RzM4M2NTWEV2SWh4alhaOXE3bTh3WTVsZWZvOVFJRGVVc3RaZTVtZEpnazNNRXZfUmFCOFE5WkFvTkIzbkJKM25GU3BxR243UU1rb1BUQ3RFVWhCWUdWcmVRUFFrU29TeFdHNDkyT3Y=)
@@ -14,40 +14,73 @@ workflows:
           APP_SPECIFIC_PASSWORD: Encrypted(Z0FBQUFBQmZxN2RMTkF4VVlsR1pxd0lkX3A3a0tGV2g0TjdQaERybDhRNE5GX3BUZ2lJcHRSbGNjeXdHWXlTOUhIX1kyTU1TZDRJYjl3UktWTVR0aWtwVlgydjR2bDFKb2lXV2NVSFZJb3hfSTRySXF0V1lfb0k9) 
           APPLE_ID: Encrypted(Z0FBQUFBQmdFOTV6Z0RwbU9HaE5HMFNlLUlmNWtkRnE1YmNxbVBVX2pDb3BUSjZ2R3gwSGpZMzlYVklXQlEwTEZHZWZoUkJ2OGRacDdCZjNFR3UzUFFxRDE2NVd6Y1dRYWpzdnJzeFRtRDRGMnkzRXI1RTFaVjQ9)
           APP_STORE_APP_ID: Encrypted(Z0FBQUFBQmhFWGlaWms5b1FESzU1TE1Ia2E0ektIM3J2Y1pPalQ3U1E0OHl6cFJNU3R3Zkx0THBtenlMal9kbXNMdUljODlZV0hzbE5qYkNYcHByQk9tLVhwaDF1TGppd0E9PQ==)
+          SONAR_TOKEN: Encrypted(Z0FBQUFBQmhFWHMzeXI0VVdsZFlEd0xyWXU1aDBLT093Yy1sZXZqZlVmODVQRG5tbWpPbm9lR3RKaklZLVM5TGhfdWxBel9WbmZvNmFnMU1LcUlYaTdmUkx5eUdvOWZ1TWRvTFo3SEJyN1lhb2EzdkQ1NXhkbXcwWHlBeVYzcVRDT0NXWkZSY01xcGM=)
+          SONAR_PROJECT_KEY: Encrypted(Z0FBQUFBQmhFWHVYRVU0WTlTYVhwcFBvVHNtaHFXT2lrMy1MODN5LVpnMGtNRDd3WnhHam5KdUpOR0V0bEw2M2xhZzR6TWtyYTNVN2RfUnprNGp0WWJkdC1yTkVKSzM4M0NrNWxOUGNvSVh1WEExbnNMWjJFQUk9)
+          SONAR_ORG_KEY: Encrypted(Z0FBQUFBQmhFWHQzZDUydmltVlMwRkY2S2JFRFdDMGZOVVc3eGFXczAxNi1xckJ1bFJrbjN5Zkx2d1hQVU5sWDdSV2hDR0ZPSk41SDFwbVlGTWl2d0thZ1Bpb2Y5XzdNcXc9PQ==)
         xcode: 12.5
         cocoapods: default
       triggering:
         events:
-          - push
-          - tag
           - pull_request
         branch_patterns:
-          - pattern: develop
+          - pattern: main
             include: true
-            source: true
+            source: false
       scripts:
+        - name: Install Sonar Scanner
+          script: | 
+            brew install sonar-scanner
         - name: Codemagic CLI Tools build
           script: |
             #!/bin/sh
-            set -ex
+            # set -ex
             # pip3 install codemagic-cli-tools # The Codemagic CLI tools are already installed on Codemagic servers
-            keychain initialize
-            app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
-            keychain add-certificates
-            xcode-project use-profiles
-            agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
-            xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
+            # keychain initialize
+            # app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+            # keychain add-certificates
+            # xcode-project use-profiles
+            # agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
+            # xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
             # Use Codemagic to publish to take advantage of asynchronous Magic Actions
             # app-store-connect publish --beta-build-localizations=@file:whats_new.json 
+        - |
+          # Generate debug build
+          xcodebuild \
+          -project "$XCODE_PROJECT" \
+          -scheme "$XCODE_SCHEME" \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 12 Pro,OS=14.5' \
+          -derivedDataPath Build/ \
+          -enableCodeCoverage YES \
+          clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        - |
+          # convert coverage report to sonarqube format
+          bash xccov-to-sonarqube-generic.sh Build/Logs/Test/*.xcresult/ > sonarqube-generic-coverage.xml
+        - |
+          # Generate and upload code analysis report
+          export PATH=$PATH:$FCI_BUILD_DIR/sonar-scanner/bin
+          sonar-scanner \
+          -Dsonar.projectKey=$SONAR_PROJECT_KEY \
+          -Dsonar.organization=$SONAR_ORG_KEY \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=$SONAR_TOKEN \
+          -Dsonar.projectVersion=1.0.0-cm \
+          -Dsonar.sources=.
+          -Dsonar.cfamily.build-wrapper-output.bypass=true \
+          -Dsonar.coverageReportPaths=sonarqube-generic-coverage.xml \
+          -Dsonar.c.file.suffixes=- \
+          -Dsonar.cpp.file.suffixes=- \
+          -Dsonar.objc.file.suffixes=-
       artifacts:
-        - build/ios/ipa/*.ipa
-        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
-      publishing:
-        app_store_connect:
-          api_key: $APP_STORE_CONNECT_PRIVATE_KEY          # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
-          key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER        # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
-          issuer_id: $APP_STORE_CONNECT_ISSUER_ID          # Alphanumeric value that identifies who created the API key, can also reference environment variable such as $APP_STORE_CONNECT_ISSUER_ID
-          submit_to_testflight: false                 
-        email:
-            recipients:
-            - kevin@nevercode.io
+        # - build/ios/ipa/*.ipa
+        # - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      # publishing:
+        # app_store_connect:
+        #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY          # Contents of the API key, can also reference environment variable such as $APP_STORE_CONNECT_PRIVATE_KEY
+        #   key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER        # Alphanumeric value that identifies the API key, can also reference environment variable such as $APP_STORE_CONNECT_KEY_IDENTIFIER
+        #   issuer_id: $APP_STORE_CONNECT_ISSUER_ID          # Alphanumeric value that identifies who created the API key, can also reference environment variable such as $APP_STORE_CONNECT_ISSUER_ID
+        #   submit_to_testflight: false                 
+        # email:
+        #     recipients:
+        #     - kevin@nevercode.io
