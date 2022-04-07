@@ -547,7 +547,7 @@
 			baseConfigurationReference = 8E1C0EB75897C805F8293C11 /* Pods-swiftly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftly/Preview Content\"";
@@ -571,7 +571,7 @@
 			baseConfigurationReference = 598075D6C5F322AF6B941B1C /* Pods-swiftly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftly/Preview Content\"";
