@@ -10,6 +10,8 @@ workflows:
           #   - signing_cert
           # provisioning_profiles:
           #   - cmswiftly
+        groups:
+          - ios_credentials
         vars:
           XCODE_WORKSPACE: "swiftly.xcworkspace"
           XCODE_SCHEME: "swiftly"
