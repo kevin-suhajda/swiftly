@@ -8,6 +8,8 @@ workflows:
           bundle_identifier: io.codemagic.cmswiftly
           certificates:
             - signing_cert
+          provisioning_profiles:
+            - cmswiftly
         vars:
           XCODE_WORKSPACE: "swiftly.xcworkspace"
           XCODE_SCHEME: "swiftly"
