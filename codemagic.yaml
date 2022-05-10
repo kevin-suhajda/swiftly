@@ -1,7 +1,7 @@
 workflows:
     ios-swiftly:
       name: ios_swiftly
-      instance_type: mac_mini
+      instance_type: mac_pro
       environment:
         vars:
           XCODE_PROJECT: "swiftly.xcodeproj"
@@ -17,7 +17,10 @@ workflows:
           SONAR_TOKEN: Encrypted(Z0FBQUFBQmhFWHMzeXI0VVdsZFlEd0xyWXU1aDBLT093Yy1sZXZqZlVmODVQRG5tbWpPbm9lR3RKaklZLVM5TGhfdWxBel9WbmZvNmFnMU1LcUlYaTdmUkx5eUdvOWZ1TWRvTFo3SEJyN1lhb2EzdkQ1NXhkbXcwWHlBeVYzcVRDT0NXWkZSY01xcGM=)
           SONAR_PROJECT_KEY: Encrypted(Z0FBQUFBQmhFWHVYRVU0WTlTYVhwcFBvVHNtaHFXT2lrMy1MODN5LVpnMGtNRDd3WnhHam5KdUpOR0V0bEw2M2xhZzR6TWtyYTNVN2RfUnprNGp0WWJkdC1yTkVKSzM4M0NrNWxOUGNvSVh1WEExbnNMWjJFQUk9)
           SONAR_ORG_KEY: Encrypted(Z0FBQUFBQmhFWHQzZDUydmltVlMwRkY2S2JFRFdDMGZOVVc3eGFXczAxNi1xckJ1bFJrbjN5Zkx2d1hQVU5sWDdSV2hDR0ZPSk41SDFwbVlGTWl2d0thZ1Bpb2Y5XzdNcXc9PQ==)
-        xcode: 12.5
+        groups:
+          - wand
+          - magic
+        xcode: latest
         cocoapods: default
       triggering:
         events:
@@ -27,6 +30,9 @@ workflows:
             include: true
             source: false
       scripts:
+        - name: Magic Number
+          script: |
+            echo "MAGIC_NUMBER ${magic}"
         - name: Install Sonar Scanner
           script: | 
             brew install sonar-scanner
