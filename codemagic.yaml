@@ -22,5 +22,5 @@ workflows:
       scripts:
         - name: Magic Number
           script: |
-            echo "MAGIC_NUMBER ${magic}"
+            echo "MAGIC_NUMBER ${MAGIC_NUMBER}"
         
