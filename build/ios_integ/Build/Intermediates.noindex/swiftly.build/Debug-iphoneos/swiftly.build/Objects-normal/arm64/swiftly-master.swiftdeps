@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "6ec9c57fb33f67118968feba8ae3d10b23ced078a817706afbab155a9ef59932"
+build_start_time: [1661888654, 886324882]
+build_end_time: [1661888658, 420721054]
+inputs:
+  "/Users/kevin/Documents/projects/swift/swiftly/swiftly/AppDelegate.swift": [1608024628, 0]
+  "/Users/kevin/Documents/projects/swift/swiftly/swiftly/ContentView.swift": [1608024628, 0]
+  "/Users/kevin/Documents/projects/swift/swiftly/swiftly/SceneDelegate.swift": [1608024628, 0]

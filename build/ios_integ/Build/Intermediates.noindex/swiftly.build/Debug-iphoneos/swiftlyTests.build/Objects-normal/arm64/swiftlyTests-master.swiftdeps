@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "561afbb3ecb6b82b54af713033065c2f0ef7132a38b95a6308e67d0040ea32c5"
+build_start_time: [1661888660, 525840997]
+build_end_time: [1661888662, 337747097]
+inputs:
+  "/Users/kevin/Documents/projects/swift/swiftly/swiftlyTests/swiftlyTests.swift": [1608024628, 0]

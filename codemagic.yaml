@@ -8,11 +8,12 @@ workflows:
           bundle_identifier: io.codemagic.cmswiftly
         groups:
           - ios_credentials
+          - gcloud_credentials
         vars:
           XCODE_WORKSPACE: "swiftly.xcworkspace"
           XCODE_SCHEME: "swiftly"
           APP_STORE_APP_ID: 1570610860
-        xcode: 13.3
+        xcode: 13.3.1
         cocoapods: default
       triggering:
         events:
@@ -24,16 +25,40 @@ workflows:
       scripts:
         - name: Increment version and build iOS app 
           script: |
-            agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
-            xcode-project use-profiles && xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
+            # agvtool new-version -all $(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID") + 1))
+            xcode-project use-profiles
+            # xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
+            
+            xcodebuild -workspace swiftly.xcworkspace \
+            -scheme swiftly \
+            -derivedDataPath ./build/ios_integ \
+            -sdk iphoneos build-for-testing
+
+            cd ./build/ios_integ/Build/Products
+            zip -r "ios_tests.zip" "Debug-iphoneos" "swiftly_iphoneos15.4-arm64.xctestrun"
+        - name: Upload to Firebase Test Lab
+          script: |
+
+            # Write the environment variable to a JSON file
+            echo $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS > ./gcloud_key_file.json
+            # Using the gcloud CLI (preinstalled on Codemagic) authenticate using the service account key
+            gcloud auth activate-service-account --key-file=gcloud_key_file.json
+            # Select YOUR Firebase project through which want to run the tests
+            gcloud --quiet config set project flutter-integration-tests
+
+            gcloud firebase test ios run --test "/Users/builder/clone/build/ios_integ/Build/Products/ios_tests.zip" \
+              --device model=iphone11pro,version=14.7,locale=en_US,orientation=portrait \
+              --xcode-version=13.3.1 \
+              --timeout 10m
       artifacts:
         - build/ios/ipa/*.ipa
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+        - /Users/builder/clone/build/ios_integ/Build/Products/ios_tests.zip
       publishing:
-        app_store_connect:
-          api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-          key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER   
-          issuer_id: $APP_STORE_CONNECT_ISSUER_ID         
+        # app_store_connect:
+        #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        #   key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER   
+        #   issuer_id: $APP_STORE_CONNECT_ISSUER_ID         
         email:
             recipients:
             - kevin@nevercode.io
