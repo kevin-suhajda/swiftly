@@ -1,0 +1,76 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd420d4e1ae034d761027201e8a79c3823b8"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42e7927b1b1f9aa99fedba7e877c06ad80"
+    },
+    {
+      "guid" : "8699adb1dd336b26511df848a716bd42abe85940e37582dfe47f4e5e636a2682"
+    },
+    {
+      "guid" : "ef63e6192758e5c91913c96ce65cf60bd1ee183bf8c2e7d20bdd71a73a0a318b"
+    },
+    {
+      "guid" : "ef63e6192758e5c91913c96ce65cf60baaee0690b1ed227512a23b1c58ab7ea0"
+    },
+    {
+      "guid" : "ef63e6192758e5c91913c96ce65cf60ba84d91197115e0ce55f8030baaea8459"
+    }
+  ],
+  "containerPath" : "/Users/kevin/Documents/projects/swift/swiftly/swiftly.xcworkspace",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "arm64e",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64e"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Index/Build/Products",
+      "derivedDataPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ",
+      "indexDataStoreFolderPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/kevin/Documents/projects/swift/swiftly/ios_integ/swiftly-bopmexwatropumgcuwcbmqsobpfd/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
