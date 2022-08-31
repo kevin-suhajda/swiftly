@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Pods-swiftly in Pods, no dependencies
+swiftly in swiftly, depends on:
+Pods-swiftly in Pods (implicit dependency via file 'Pods_swiftly.framework' in build phase 'Link Binary')
