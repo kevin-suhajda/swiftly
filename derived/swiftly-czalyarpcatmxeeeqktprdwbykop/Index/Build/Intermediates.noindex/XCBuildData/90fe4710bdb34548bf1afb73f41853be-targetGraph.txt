@@ -1,0 +1,33 @@
+Target dependency graph (17 targets)
+Pods-swiftly in Pods, no dependencies
+Pods-swiftly in Pods, no dependencies
+Pods-swiftly in Pods, no dependencies
+Pods-swiftly-swiftlyUITests in Pods, no dependencies
+Pods-swiftly-swiftlyUITests in Pods, no dependencies
+Pods-swiftly-swiftlyUITests in Pods, no dependencies
+Pods-swiftlyTests in Pods, depends on:
+Pods-swiftly in Pods (explicit)
+Pods-swiftlyTests in Pods, depends on:
+Pods-swiftly in Pods (explicit)
+Pods-swiftlyTests in Pods, depends on:
+Pods-swiftly in Pods (explicit)
+swiftly in swiftly, depends on:
+Pods-swiftly in Pods (implicit dependency via file 'Pods_swiftly.framework' in build phase 'Link Binary')
+swiftly in swiftly, depends on:
+Pods-swiftly in Pods (implicit dependency via file 'Pods_swiftly.framework' in build phase 'Link Binary')
+swiftlyTests in swiftly, depends on:
+swiftly in swiftly (explicit)
+Pods-swiftlyTests in Pods (implicit dependency via file 'Pods_swiftlyTests.framework' in build phase 'Link Binary')
+swiftlyTests in swiftly, depends on:
+swiftly in swiftly (explicit)
+Pods-swiftlyTests in Pods (implicit dependency via file 'Pods_swiftlyTests.framework' in build phase 'Link Binary')
+swiftlyTests in swiftly, depends on:
+Pods-swiftlyTests in Pods (implicit dependency via file 'Pods_swiftlyTests.framework' in build phase 'Link Binary')
+swiftlyUITests in swiftly, depends on:
+swiftly in swiftly (explicit)
+Pods-swiftly-swiftlyUITests in Pods (implicit dependency via file 'Pods_swiftly_swiftlyUITests.framework' in build phase 'Link Binary')
+swiftlyUITests in swiftly, depends on:
+swiftly in swiftly (explicit)
+Pods-swiftly-swiftlyUITests in Pods (implicit dependency via file 'Pods_swiftly_swiftlyUITests.framework' in build phase 'Link Binary')
+swiftlyUITests in swiftly, depends on:
+Pods-swiftly-swiftlyUITests in Pods (implicit dependency via file 'Pods_swiftly_swiftlyUITests.framework' in build phase 'Link Binary')
